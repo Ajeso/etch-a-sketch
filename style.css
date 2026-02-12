@@ -6,6 +6,7 @@ main {
 }
 
 .container {
+  background-color: aliceblue;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,6 +17,5 @@ main {
 }
 .grid-div {
   border: 2px solid purple;
-  width: 40px;
-  height: 40px;
+  box-sizing: border-box;
 }
