@@ -1,6 +1,9 @@
 const container = document.querySelector(".container");
 let gridBox = document.querySelector(".grid-div");
 let slider = document.getElementById("gridSlider");
+const resetBtn = document.getElementById("resetBtn");
+const randomColorToggle = document.getElementById("randomColorToggle");
+
 let size = slider.value;
 function generateGrid(size) {
   while (container.firstChild) {
@@ -21,8 +24,10 @@ function generateGrid(size) {
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256);
         div.baseColor = { r, g, b };
-        div.darknessLevel = 0;
+      } else {
+        div.baseColor = { r: 0, g: 0, b: 0 };
       }
+      div.darknessLevel = 0;
       if (div.darknessLevel < 10) {
         let r = div.baseColor.r;
         let g = div.baseColor.g;
@@ -43,4 +48,13 @@ slider.addEventListener("input", () => {
   size = slider.value;
   document.getElementById("gridValue").textContent = size;
   generateGrid(size);
+});
+
+resetBtn.addEventListener("click", () => {
+  generateGrid(slider.value);
+});
+
+let useRandomColors = true;
+randomColorToggle.addEventListener("change", () => {
+  useRandomColors = randomColorToggle.checked;
 });

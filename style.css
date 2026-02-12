@@ -19,3 +19,88 @@ main {
   border: 2px solid purple;
   box-sizing: border-box;
 }
+.sidebar {
+  background-color: #f0e6ff; /* soft purple/lavender */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar h2 {
+  color: #5b2c6f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gridSlider {
+  width: 80%;
+  margin: 10px 0;
+  accent-color: #5b2c6f; /* slider thumb color */
+}
+
+#resetBtn {
+  padding: 10px 20px;
+  background-color: #5b2c6f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#resetBtn:hover {
+  background-color: #7d3c98;
+  transform: scale(1.05);
+}
+
+.instructions {
+  font-size: 0.85rem;
+  color: #4b2c6f;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  accent-color: #5b2c6f;
+  margin-left: 5px;
+}
+/* Button pulse effect */
+#resetBtn:hover {
+  background-color: #7d3c98;
+  transform: scale(1.05);
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.sidebar:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
