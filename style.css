@@ -2,7 +2,7 @@ main {
   display: flex;
   margin: 0 auto;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .container {
@@ -50,7 +50,7 @@ main {
 #gridSlider {
   width: 80%;
   margin: 10px 0;
-  accent-color: #5b2c6f; /* slider thumb color */
+  accent-color: #5b2c6f;
 }
 
 #resetBtn {
